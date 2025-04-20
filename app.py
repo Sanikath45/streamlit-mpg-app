@@ -54,7 +54,7 @@ default_vclass = vclass_mapping.get('Compact Cars', list(vclass_mapping.values()
 def predict_mpg(make, model, year, cylinders, displ, fuel_type, v_class):
     try:
         input_data = pd.DataFrame({
-            'make': [make],
+            'Brand': [make],
             'model': [model],
             'year': [year],
             'cylinders': [cylinders],
