@@ -54,7 +54,7 @@ default_vclass = vclass_mapping.get('Compact Cars', list(vclass_mapping.values()
 def predict_mpg(make, model, year, cylinders, displ, fuel_type, v_class):
     try:
         input_data = pd.DataFrame({
-            'Brand': [make],
+            'make': [make],
             'model': [model],
             'year': [year],
             'cylinders': [cylinders],
@@ -89,7 +89,7 @@ st.write("(Leave unchanged if unknown.)")
 
 # Make
 default_make_label = make_reverse.get(default_make, list(make_reverse.values())[0])
-make = st.selectbox("Make", sorted(make_mapping.keys()), index=sorted(make_mapping.keys()).index(default_make_label))
+make = st.selectbox("Brand", sorted(make_mapping.keys()), index=sorted(make_mapping.keys()).index(default_make_label))
 
 # Model
 default_model_label = model_reverse.get(default_model, list(model_reverse.values())[0])
